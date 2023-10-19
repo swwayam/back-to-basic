@@ -1,0 +1,128 @@
+///
+    What to do?
+    1. We will learn about interfaces, classes and models and OOP's ( Object Oriented Programming ) concepts.
+    
+    Why to do?
+    1. Safety and Security.
+    2. OOP's makes life a little easier.
+
+
+***** The below are opp's concepts not to be taken or interpreted in angular ****
+
+    1) Abstraction / Encapulation :- isolating or hiding the data in their respected premises.
+    2) Polymorphism :- means many forms - ex kal() | call(app, internet) / call(app, network).
+    3) Inheritance :- means accessing parent properties in a child.
+    4) Interfaces :- it acts as a blue print of a class.
+    5) Classes and Objects.
+
+
+///*** Creating a rough blue print 
+
+    // Interface is like a list of ingredients that are compolsoury for our tasty birayani.
+
+    // The below is a interface of car -> basically ingredients / components / blue print required to create our class.
+
+    interface carTemplate {
+        _numberPlate : number
+        _carName : string
+
+        onStart() : void{
+        }
+
+        onStop() : void{
+        }
+
+        speedIncrease() : number{
+        }
+    }
+
+    // Class is like ingredient ka shop as well pan which will make our birayani
+
+    class car implements carTemplate {
+
+        // Accoring to S we only consider variables from blue print (Interface)
+
+        constructor(numberPlate, carName, color, model){
+            this._carName = carName
+            this._numberPlate = numberPlate
+            this._color = color
+            this._model = model
+        }
+
+        // Accoring to M we only consider functions from blue print (Interface)
+        onStart(): void{
+            log(start)
+        }
+
+        onStop() : void {
+            log(stop)
+        }
+
+        speedIncrease() : number{
+            log(inc)
+        }
+
+        slowSpeed(){
+          log(slow)  
+        }
+
+        // The answer is we require all of the elements from our blue print (interface)
+       
+    }
+
+
+    // Now everything is ready that is our ingredients + our recipe book (class) 
+    // The only thing that is left is to make our birayani.
+
+    // Now everything is ready that is our components + our design | modules (class) 
+    // The only thing that we need to do is use the given material to make the car
+
+
+    car1 = new car(00, BMMW, white, 1123)
+
+    `````   if i log car1 now i would be getting the following -
+
+            {
+                _numberPlate = 0000
+                _carName = BMW
+                _color = white
+                _model = 1221
+                
+                onStop() : void {
+                    log(stop)
+                }
+
+                speedIncrease() : number{
+                    log(inc)
+                }
+
+                slowSpeed(){
+                    log(slow)  
+                }      
+
+            }
+
+    ``````````` If we want to access the functions of the Object we say -
+                car1.onStart()
+                
+
+////// Summary 
+    
+    1. We used interface to define blueprint / struture of our class.
+        --- We did it because in interface we only have those variables or functions or any other data member that are critical to our class.
+        --- It overall decreases the risks of class implementation going worng or class missing any critical functions.
+        --- If anything misses in our implementation the complier simply gives an error.
+
+    2. We used a class to implement functions and data memebers as defined in the blueprint.
+        --- We did it because it's easier and safer option to create Objects.
+        --- The major advantage is when we create Objects using class there is very less chances of us going wrong.
+        --- Risk of going worng is less because, a class has all the things in it, so even if we have multiple Objects we can manage them efficently. making changes would be very easy in it.
+
+
+/// Day 2 ///
+
+    {
+        name: "Dove",
+        etc,
+        etc,
+    }
