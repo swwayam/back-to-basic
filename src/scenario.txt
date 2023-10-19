@@ -119,10 +119,14 @@
         --- Risk of going worng is less because, a class has all the things in it, so even if we have multiple Objects we can manage them efficently. making changes would be very easy in it.
 
 
+
 /// Day 2 ///
 
     {
-        name: "Dove",
-        etc,
+        name: this.name,
+        etc : this.etc,
         etc,
     }
+
+    ** We implemented the class as well as the interface
+    -- 
